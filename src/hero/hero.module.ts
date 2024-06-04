@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { HeroController } from './hero.controller';
-import { HeroService } from './hero.service';
+
 import { ExceptionFilter } from './hero.filter';
 import { APP_FILTER } from '@nestjs/core';
 
@@ -8,7 +8,6 @@ import { APP_FILTER } from '@nestjs/core';
   imports: [],
   controllers: [HeroController],
   providers: [
-    HeroService,
     {
       provide: APP_FILTER,
       useClass: ExceptionFilter,
