@@ -8,4 +8,9 @@ export class HeroController {
   getHello(): string {
     throw new HeroNotFoundException();
   }
+
+  @Get()
+  getError(): string {
+    throw new Error();
+  }
 }
