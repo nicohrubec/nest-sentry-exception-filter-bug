@@ -9,7 +9,7 @@ export class HeroController {
     throw new HeroNotFoundException();
   }
 
-  @Get()
+  @Get('/error')
   getError(): string {
     throw new Error();
   }
